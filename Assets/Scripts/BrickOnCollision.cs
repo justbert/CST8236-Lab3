@@ -8,6 +8,7 @@ public class BrickOnCollision : MonoBehaviour
     public float explosionRadius;
     private MoveSphere move;
     public GameObject particle;
+    public GameObject explosion;
 
 	// Use this for initialization
 	void Start ()
@@ -36,6 +37,7 @@ public class BrickOnCollision : MonoBehaviour
             GameObject newParticle = Instantiate(particle, transform.position, Quaternion.identity) as GameObject;
 
             newParticle.GetComponent<ParticleSystem>().Play();
+            newParticle.GetComponent<AudioSource>().Play();
         }
 
     }
