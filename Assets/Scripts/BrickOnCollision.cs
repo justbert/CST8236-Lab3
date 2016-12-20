@@ -13,8 +13,8 @@ public class BrickOnCollision : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-	    explosiveForce = 500.0f;
-	    explosionRadius = 2.0f;
+	    explosiveForce = 100.0f;
+	    explosionRadius = 5.0f;
         GameObject ball = GameObject.Find("Ball");
         move = ball.GetComponent<MoveSphere>();
 	    particle = GameObject.Find("SparkEmitter");
